@@ -17,7 +17,7 @@ print("Streaming started")
 video_capture = cv2.VideoCapture(0)
 # loop over frames from the video file stream
 while True:
-    # grab the frame from the threaded video stream
+    # grab the frame from the threaded video streams
     ret, frame = video_capture.read()
     gray = cv2.cvtColor(frame, cv2.COLOR_BGR2GRAY)
     faces = faceCascade.detectMultiScale(gray,
