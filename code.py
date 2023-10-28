@@ -16,7 +16,7 @@ faceCascade = cv2.CascadeClassifier(mxlpath)
 # load the known faces and embeddings saved in last file
 data = pickle.loads(open('face_enc3', "rb").read())
 countuk=0
-print("Streaming started")
+print("Video capture started started")
 video_capture = cv2.VideoCapture(0)
 # loop over frames from the video file stream
 while True:
@@ -40,7 +40,9 @@ while True:
        #Compare encodings with encodings in data["encodings"]
        #Matches contain array with boolean values and True for the embeddings it matches closely
        #and False for rest
-        matches = face_recognition.compare_faces(data["encodings"],
+
+        key = "encodings"
+        matches = face_recognition.compare_faces(data[key],
          encoding)
         #set name =inknown if no encoding matches
         name = "Unknown"
