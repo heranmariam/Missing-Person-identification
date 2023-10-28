@@ -9,7 +9,10 @@ import os
 # cascPathface = os.path.dirname(
 #  cv2.__file__) + "haarcascade_frontalface_alt2.xml"
 # load the harcaascade in the cascade classifier
-faceCascade = cv2.CascadeClassifier(cv2.data.haarcascades + "haarcascade_frontalface_alt2.xml")
+
+xmlpath = cv2.data.haarcascades + "haarcascade_frontalface_alt2.xml"
+
+faceCascade = cv2.CascadeClassifier(mxlpath)
 # load the known faces and embeddings saved in last file
 data = pickle.loads(open('face_enc3', "rb").read())
 countuk=0
