@@ -4,7 +4,7 @@ import pickle
 import cv2
 import os
  
-#get paths of each file in folder named Images
+#get paths of each file in folder named Image
 #Images here contains my data(folders of various persons)
 imagePaths = list(paths.list_images('dataset'))
 knownEncodings = []
